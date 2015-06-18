@@ -97,8 +97,8 @@ app.getRecipes = function(){
 app.sortRecipes = function(){
     $('.container2').empty();
     $.each(app.results, function(item, content){
-        var $title = $('<h2>').text(content.recipeName);
-        var $secondTitle = $('<h3>').text('Ingredients:');
+        var $title = $('<h3>').text(content.recipeName);
+        var $secondTitle = $('<h4>').text('Ingredients:');
         var space = ("" + content.ingredients).replace(/,/g, ', ');
         var $ingredients = $('<p>').addClass('ingredients').text(space);
         var imagePattern = /=s90/;
@@ -217,11 +217,19 @@ app.popularMoviesByDocumentary = function (query){
 //Append results to .container1
 app.displayMovies = function(movieData){
     $(".container1").empty();
+    $('.movieTitle').append("<h2>Which Movie to Watch!</h2>");
+    $('.recipeTitle').append("<h2>What to Eat!</h2>");
+
     for(var i = 0; i < 3; i++){
-        var $title = $("<h2>").text(movieData.results[i].title);
-        var $image = $("<img>").attr("src", "https://image.tmdb.org/t/p/w396" + movieData.results[i].poster_path)
-        $(".container1").append($title, $image);
+        var $title = $("<h3>").text(movieData.results[i].title);
+        var $image = $("<img>").attr("src", "https://image.tmdb.org/t/p/w396" + movieData.results[i].poster_path);
+        var $movieDiv = $('<div>').addClass('movieWrap').append($title, $image);
+         
+         
+        $('.container1').append($movieDiv);
+        // $(".container1").append($title, $image);
     }
+
 };
 
 

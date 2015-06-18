@@ -137,8 +137,7 @@ body {
 .wrapper {
   width: 100%;
   text-align: center;
-  margin: 0 auto;
-  padding: 20px 0; }
+  margin: 0 auto; }
 
 img {
   max-width: 100%; }
@@ -186,7 +185,7 @@ section.main {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background-color: black; }
+  background-color: #aae2e1; }
   section.main .container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -201,7 +200,6 @@ section.main {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-color: lightGrey;
     width: 80%;
     margin: 0 auto; }
     section.main .container .topRow, section.main .container .bottomRow {
@@ -234,29 +232,12 @@ section.main {
             width: 150px; }
           section.main .container .topRow a .choice p, section.main .container .bottomRow a .choice p {
             text-transform: uppercase;
-            font-size: 40px;
-            color: #000000; }
+            font-size: 1.2rem;
+            color: #000000;
+            font-weight: 700; }
 
-.selection1 {
-  background-color: grey; }
-
-.selection2 {
-  background-color: red; }
-
-.selection3 {
-  background-color: green; }
-
-.selection4 {
-  background-color: lightBlue; }
-
-.selection5 {
-  background-color: grey; }
-
-.selection6 {
-  background-color: lightGrey; }
-
-.container1, .container2 {
-  background-color: lightBlue;
+.container1, .container2, .movieTitle, .recipeTitle {
+  background-color: #69a6ce;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -265,13 +246,30 @@ section.main {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start; }
-  .container1 img, .container2 img {
-    width: 15%; }
 
-.container2 {
-  background-color: black; }
-  .container2 img {
+.container2, .recipeTitle {
+  background-color: #F5E9E9; }
+  .container2 img, .recipeTitle img {
     width: 300px; }
 
-.container:nth-child(3) {
-  background-color: red; }
+.container1 h3, .container2 h3 {
+  width: 70%;
+  margin: auto;
+  background-color: #6188a5;
+  padding: 20px;
+  color: white; }
+
+.movieTitle h2, .recipeTitle h2 {
+  margin: 50px auto 0px; }
+
+.movieWrap, .together {
+  width: 30%;
+  margin: 2%;
+  padding: 15px; }
+  .movieWrap img, .together img {
+    width: 70%; }
+  .movieWrap p, .together p {
+    text-transform: capitalize; }
+  .movieWrap a, .together a {
+    text-decoration: none;
+    color: #000000; }
