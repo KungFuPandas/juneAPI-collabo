@@ -1,25 +1,60 @@
 // RESULTS SECTION STYLES
 // -------------------------------------------------
 
-.container1, .container2 {
-	background-color: lightBlue;
+.container1, .container2, .movieTitle, .recipeTitle {
+	background-color: $darkBlue;
 	display: flex;
 	align-items: flex-start;
 
-	img{
-		width: 15%;
-	}
 }
 
-.container2 {
-	background-color:black;
+.container2, .recipeTitle {
+	background-color:$lightPink;
 
 	img {
 		width: 300px;
 	}
 }
 
-.container:nth-child(3){
-	background-color: red;
+.container1, .container2 {
+		h3 {
+		width: 70%;
+		margin: auto;
+		background-color: #6188a5;
+		padding: 20px;
+		color: white;
+	}
+}
+
+.movieTitle, .recipeTitle {
+	h2{
+		margin:50px auto 0px;
+	}
+}
+
+.movieWrap, .together {
+	width: 30%;
+	margin: 2%;
+	padding: 15px;
+
+	img{
+		width: 70%;
+	}
+	p {
+		text-transform:capitalize;
+	}
+
+	a {
+		text-decoration: none;
+		color:$black;
+	}
+
+}	
+
+@media (max-width: 768px) {
 
 }
+@media (max-width: 480px){
+
+}
+

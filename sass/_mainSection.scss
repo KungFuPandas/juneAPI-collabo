@@ -5,12 +5,11 @@ section.main{
 	display: flex;
 	align-items: center;
 	width:100%;
-	background-color: black;
+	background-color: $lightGreen;
 	.container{
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		background-color: lightGrey;
 		width: 80%;
 		margin: 0 auto;
 		.topRow, .bottomRow{
@@ -30,8 +29,9 @@ section.main{
 					}
 					p{
 						text-transform: uppercase;
-						font-size: 40px;
+						font-size: 1.2rem;
 						color: $black;
+						font-weight: 700;
 
 					}
 				}
@@ -41,24 +41,24 @@ section.main{
 	}
 }
 
-.selection1  {
-	background-color: grey;
-}
-.selection2 {
-	background-color: red;
+// .selection1  {
+// 	background-color: grey;
+// }
+// .selection2 {
+// 	background-color: red;
 
-}
-.selection3{
-	background-color: green;
-}
+// }
+// .selection3{
+// 	background-color: green;
+// }
 
-.selection4  {
-	background-color: lightBlue;
-}
-.selection5 {
-	background-color: grey;
+// .selection4  {
+// 	background-color: lightBlue;
+// }
+// .selection5 {
+// 	background-color: grey;
 
-}
-.selection6{
-	background-color: lightGrey;
-}
+// }
+// .selection6{
+// 	background-color: lightGrey;
+// }
