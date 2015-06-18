@@ -129,21 +129,29 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 body {
   background: #ffffff;
-  color: #000000; }
+  color: #000000;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1rem;
+  font-size: 16px; }
 
 .wrapper {
-  width: 80%;
+  width: 100%;
   text-align: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 20px 0; }
 
 img {
   max-width: 100%; }
+
+h1, h2, h3, h4 {
+  font-family: "Titillium Web", sans-serif; }
 
 header {
   background: url(../assets/images/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 500px;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -177,9 +185,9 @@ section.main {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 800px;
-  width: 90%; }
-  section.main .wrapper {
+  width: 100%;
+  background-color: black; }
+  section.main .container {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -193,8 +201,10 @@ section.main {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 90%; }
-    section.main .wrapper .topRow, section.main .wrapper .bottomRow {
+    background-color: lightGrey;
+    width: 80%;
+    margin: 0 auto; }
+    section.main .container .topRow, section.main .container .bottomRow {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -203,13 +213,13 @@ section.main {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-      section.main .wrapper .topRow a, section.main .wrapper .bottomRow a {
+      section.main .container .topRow a, section.main .container .bottomRow a {
         text-decoration: none;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex; }
-        section.main .wrapper .topRow a .choice, section.main .wrapper .bottomRow a .choice {
+        section.main .container .topRow a .choice, section.main .container .bottomRow a .choice {
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -218,10 +228,50 @@ section.main {
           -webkit-box-direction: normal;
           -webkit-flex-direction: column;
               -ms-flex-direction: column;
-                  flex-direction: column; }
-          section.main .wrapper .topRow a .choice img, section.main .wrapper .bottomRow a .choice img {
-            border: 3px solid #000000; }
-          section.main .wrapper .topRow a .choice p, section.main .wrapper .bottomRow a .choice p {
+                  flex-direction: column;
+          margin-top: 15px; }
+          section.main .container .topRow a .choice img, section.main .container .bottomRow a .choice img {
+            width: 150px; }
+          section.main .container .topRow a .choice p, section.main .container .bottomRow a .choice p {
             text-transform: uppercase;
             font-size: 40px;
             color: #000000; }
+
+.selection1 {
+  background-color: grey; }
+
+.selection2 {
+  background-color: red; }
+
+.selection3 {
+  background-color: green; }
+
+.selection4 {
+  background-color: lightBlue; }
+
+.selection5 {
+  background-color: grey; }
+
+.selection6 {
+  background-color: lightGrey; }
+
+.container1, .container2 {
+  background-color: lightBlue;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .container1 img, .container2 img {
+    width: 15%; }
+
+.container2 {
+  background-color: black; }
+  .container2 img {
+    width: 300px; }
+
+.container:nth-child(3) {
+  background-color: red; }
