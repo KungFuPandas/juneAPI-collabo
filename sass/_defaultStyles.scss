@@ -4,14 +4,22 @@
 body {
 	background: $white;
 	color: $black;
+	font-family: $mainFont;
+	font-size: 1rem;
+	font-size: 16px;
 }
 
 .wrapper {
-	width: 80%;
+	width: 100%;
 	text-align: center;
 	margin:0 auto;
+	padding: 20px 0;
 }
 
 img{ 
 	max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+	font-family: $mainFont;
 }
