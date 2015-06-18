@@ -1,0 +1,37 @@
+// MAIN SECTION STYLES
+// -------------------------------------------------
+
+section.main{
+	display: flex;
+	align-items: center;
+	height: 800px;
+	width:90%;
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width:90%;
+		.topRow, .bottomRow{
+			display: flex;
+			justify-content: space-between;
+			a{
+				text-decoration: none;
+				display: flex;
+				.choice{
+					display: flex;
+					flex-direction: column;
+					img{
+						border: 3px solid $black;
+					}
+					p{
+						text-transform: uppercase;
+						font-size: 40px;
+						color: $black;
+
+					}
+				}
+			}
+
+		}
+	}
+}
