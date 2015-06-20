@@ -41,24 +41,18 @@ section.main{
 	}
 }
 
-// .selection1  {
-// 	background-color: grey;
-// }
-// .selection2 {
-// 	background-color: red;
+@media (max-width: 768px) {
+	section.main .container .topRow a .choice img, , section.main .container .bottomRow a .choice img {
+		width: 100px;
+	}
+	section.main .container .topRow a .choice p, section.main .container .bottomRow a .choice p {
+		font-size: 	1rem;
 
-// }
-// .selection3{
-// 	background-color: green;
-// }
+	}
 
-// .selection4  {
-// 	background-color: lightBlue;
-// }
-// .selection5 {
-// 	background-color: grey;
 
-// }
-// .selection6{
-// 	background-color: lightGrey;
-// }
+}
+@media (max-width: 480px){
+
+}
+

@@ -171,7 +171,8 @@ header {
             flex-direction: column; }
     header .wrapper h1 {
       text-transform: uppercase;
-      font-size: 70px; }
+      font-size: 70px;
+      font-family: "Luckiest Guy", cursive; }
     header .wrapper h2 {
       font-size: 50px; }
 
@@ -236,6 +237,12 @@ section.main {
             color: #000000;
             font-weight: 700; }
 
+@media (max-width: 768px) {
+  section.main .container .topRow a .choice img, section.main .container .bottomRow a .choice img {
+    width: 100px; }
+  section.main .container .topRow a .choice p, section.main .container .bottomRow a .choice p {
+    font-size: 1rem; } }
+
 .container1, .container2, .movieTitle, .recipeTitle {
   background-color: #69a6ce;
   display: -webkit-box;
@@ -245,31 +252,117 @@ section.main {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
 .container2, .recipeTitle {
-  background-color: #F5E9E9; }
+  background-color: #efc6c6; }
   .container2 img, .recipeTitle img {
     width: 300px; }
 
 .container1 h3, .container2 h3 {
-  width: 70%;
+  width: 100%;
   margin: auto;
   background-color: #6188a5;
   padding: 20px;
   color: white; }
 
+.container2 h3 {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+
 .movieTitle h2, .recipeTitle h2 {
-  margin: 50px auto 0px; }
+  margin: 50px auto 0px;
+  font-family: "Luckiest Guy", cursive; }
 
 .movieWrap, .together {
-  width: 30%;
-  margin: 2%;
-  padding: 15px; }
+  margin: 1.5%;
+  padding: 15px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 30%;
+      -ms-flex: 1 0 30%;
+          flex: 1 0 30%; }
   .movieWrap img, .together img {
-    width: 70%; }
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
   .movieWrap p, .together p {
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+    background-color: #f77987;
+    padding: 15px;
+    margin: 0;
+    color: white; }
   .movieWrap a, .together a {
     text-decoration: none;
+    color: #000000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+
+.container2 h3 {
+  background-color: #f77987; }
+
+@media (max-width: 768px) {
+  .movieWrap, .together {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 40%;
+        -ms-flex: 1 0 40%;
+            flex: 1 0 40%; }
+  .movieWrap:last-child, .together:last-child {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    margin: 0 auto; } }
+
+@media (max-width: 480px) {
+  .movieWrap, .together {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%; }
+  .movieWrap:last-child, .together:last-child {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin: 0 auto; } }
+
+footer {
+  background-color: #69a6ce;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600; }
+  footer a {
     color: #000000; }

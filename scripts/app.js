@@ -98,13 +98,13 @@ app.sortRecipes = function(){
     $('.container2').empty();
     $.each(app.results, function(item, content){
         var $title = $('<h3>').text(content.recipeName);
-        var $secondTitle = $('<h4>').text('Ingredients:');
-        var space = ("" + content.ingredients).replace(/,/g, ', ');
+        // var $secondTitle = $('<h4>').text('Ingredients:');
+        var space = ("Ingredients: " + content.ingredients).replace(/,/g, ', ');
         var $ingredients = $('<p>').addClass('ingredients').text(space);
         var imagePattern = /=s90/;
         var $image = $('<img>').attr('src', content.smallImageUrls[0].replace(imagePattern, '=s250'));
         var $recipeId = $('<a>').attr('href', 'http://www.yummly.com/recipe/' + content.id);
-        var $recipeLink = $recipeId.append($image, $title, $secondTitle, $ingredients);
+        var $recipeLink = $recipeId.append($image, $title, $ingredients);
         var $fullRecipe = $('<div>').addClass('together').append($recipeLink);
         $('.container2').append($fullRecipe);
     })
@@ -225,7 +225,7 @@ app.displayMovies = function(movieData){
         var $image = $("<img>").attr("src", "https://image.tmdb.org/t/p/w396" + movieData.results[i].poster_path);
         var $movieDiv = $('<div>').addClass('movieWrap').append($title, $image);
          
-         
+
         $('.container1').append($movieDiv);
         // $(".container1").append($title, $image);
     }
