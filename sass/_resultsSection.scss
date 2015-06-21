@@ -5,6 +5,7 @@
 	background-color: $darkBlue;
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 
 }
 
@@ -18,7 +19,7 @@
 
 .container1, .container2 {
 		h3 {
-		width: 70%;
+		width: 100%;
 		margin: auto;
 		background-color: #6188a5;
 		padding: 20px;
@@ -26,35 +27,76 @@
 	}
 }
 
+.container2 h3 {
+	order:1;
+}
+
 .movieTitle, .recipeTitle {
 	h2{
 		margin:50px auto 0px;
+		font-family: $headerFont;
 	}
 }
 
 .movieWrap, .together {
-	width: 30%;
-	margin: 2%;
+	// width: 30%;
+	margin: 1.5%;
 	padding: 15px;
+	flex: 1 0 30%;
 
 	img{
-		width: 70%;
+		width: 100%;
+		display: flex;
+		margin: 0 auto;
+		order:1;
+
 	}
 	p {
 		text-transform:capitalize;
+		order:-1;
+		background-color: $darkPink;
+		  padding: 15px;
+		  margin: 0;
+		  color:white;
 	}
 
 	a {
 		text-decoration: none;
 		color:$black;
+		display: flex;
+		flex-direction: column-reverse;
 	}
 
-}	
+}
+
+.container2 h3 {
+	background-color: $darkPink;
+}
 
 @media (max-width: 768px) {
 
+	.movieWrap, .together {
+		flex: 1 0 40%;
+	}
+
+	.movieWrap:last-child, .together:last-child {
+		flex: 0 0 50%;
+		margin: 0 auto;
+	}
+
+
 }
 @media (max-width: 480px){
+
+	.movieWrap, .together {
+		flex: 1 0 100%;
+	}
+
+	.movieWrap:last-child, .together:last-child {
+		flex: 0 0 100%;
+		margin: 0 auto;
+	}
+
 
 }
 
